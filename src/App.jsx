@@ -1,20 +1,32 @@
 import './scss/app.scss';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ApolloProvider } from '@apollo/client';
+import Sidebar from './common/Sidebar';
+import client from './gql/client';
 import Dashboard from './dashboard';
 
 const AppProviders =
 ({ children }) => (
-  <BrowserRouter>
-    { children }
-  </BrowserRouter>
+  <ApolloProvider client={client}>
+    <BrowserRouter>
+      { children }
+    </BrowserRouter>
+  </ApolloProvider>
 );
 
 const AppRoutes =
 () => (
-  <Route exact path="/">
-    <Dashboard />
-  </Route>
+  <Switch>
+    <Route exact path="/">
+      <Sidebar />
+      <Dashboard />
+    </Route>
+    <Route exact path="/submit">
+      <Sidebar />
+      <Dashboard />
+    </Route>
+  </Switch>
 );
 
 const App =

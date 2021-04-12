@@ -5,7 +5,7 @@ import { useGeolocation } from 'react-use';
 import ProblemCard from './ProblemCard';
 
 const Map =
-  () => {
+  ({ reports }) => {
     const pos = useGeolocation();
 
     if ( pos.loading ) {
@@ -33,11 +33,15 @@ const Map =
           accessToken="pk.eyJ1Ijoidml4cmFudCIsImEiOiJja21nbDNtYXowYWVsMm5tb2I4YjdpazhnIn0.plBMqe9eheGOp8ZRFTKTBQ"
           id="vixrant/ckmgm3cic22rg17oi3c45by0g"
         />
-        <Marker position={[pos.latitude, pos.longitude]} style={{ innerWidth: "auto" }}>
-          <Popup className="popover-fit">
-            <ProblemCard />
-          </Popup>
-        </Marker>
+        
+        {reports && reports.map((r, i) => (
+          <Marker position={[r.lat, r.lng]} style={{ innerWidth: "auto" }}>
+            <Popup className="popover-fit">
+              <ProblemCard {...r} key={i} />
+            </Popup>
+          </Marker>
+        ))}
+
       </MapContainer>
     );
   }
