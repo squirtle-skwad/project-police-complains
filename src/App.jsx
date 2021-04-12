@@ -22,8 +22,19 @@ const AppRoutes =
       <Sidebar />
       <Dashboard />
     </Route>
-    <Route exact path="/submit">
+    <Route exact path="/squads">
       <Sidebar />
+      <Dashboard />
+    </Route>
+    <Route exact path="/stats">
+      <Sidebar />
+      <Dashboard />
+    </Route>
+    <Route exact path="/login">
+      <Sidebar />
+      <Dashboard />
+    </Route>
+    <Route exact path="/submit">
       <Dashboard />
     </Route>
   </Switch>
