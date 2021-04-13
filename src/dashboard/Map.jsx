@@ -1,5 +1,5 @@
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import { GridLoader } from 'react-spinners';
+import { CircleLoader } from 'react-spinners';
 import { useGeolocation } from 'react-use';
 
 import ProblemCard from './ProblemCard';
@@ -10,8 +10,8 @@ const Map =
 
     if ( pos.loading ) {
       return (
-        <div className="vh-100 vw-100">
-          <GridLoader />
+        <div className="vh-100 w-100 d-flex justify-content-center align-items-center">
+          <CircleLoader />
         </div>
       );
     }

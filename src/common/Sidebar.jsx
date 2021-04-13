@@ -1,8 +1,9 @@
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { RiPoliceCarFill, RiTreasureMapFill, RiLogoutBoxFill } from 'react-icons/ri';
+import { RiTreasureMapFill, RiLogoutBoxFill } from 'react-icons/ri';
 import { ImStatsDots } from 'react-icons/im';
 import { CgProfile } from 'react-icons/cg';
+import { IoIosDocument } from 'react-icons/io';
 
 const Sidebar =
 () => {
@@ -16,12 +17,12 @@ const Sidebar =
         <RiTreasureMapFill size={32} />
       </Button>
 
-      <Button tag={Link} to="/squads" color="light" className="mt-4">
-        <RiPoliceCarFill size={32} />
-      </Button>
-
       <Button tag={Link} to="/stats" color="light" className="mt-4">
         <ImStatsDots size={32} />
+      </Button>
+
+      <Button tag={Link} to="/submit" color="light" className="mt-4">
+        <IoIosDocument size={32} />
       </Button>
 
       <Button tag={Link} to="/login" color="light" className="mt-auto">

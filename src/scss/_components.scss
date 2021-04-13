@@ -39,3 +39,12 @@
   align-items: center;
   justify-content: center;
 }
+
+// Grid masonry
+
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: masonry;
+  gap: 16px;
+}
