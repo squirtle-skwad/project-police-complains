@@ -7,6 +7,7 @@ import client from './gql/client';
 import Sidebar from './common/Sidebar';
 import Dashboard from './dashboard';
 import Stats from './stats';
+import Login from './login';
 
 const AppProviders =
 ({ children }) => (
@@ -29,8 +30,7 @@ const AppRoutes =
       <Stats />
     </Route>
     <Route exact path="/login">
-      <Sidebar />
-      <Dashboard />
+      <Login />
     </Route>
     <Route exact path="/submit">
       <Dashboard />

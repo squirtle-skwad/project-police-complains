@@ -27,7 +27,7 @@ const Map =
     return (
       <MapContainer
         center={[pos.latitude, pos.longitude]}
-        zoom={16}
+        zoom={12}
         zoomControl={false}
         inertia
         doubleClickZoom
@@ -39,7 +39,8 @@ const Map =
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
           accessToken="pk.eyJ1Ijoidml4cmFudCIsImEiOiJja21nbDNtYXowYWVsMm5tb2I4YjdpazhnIn0.plBMqe9eheGOp8ZRFTKTBQ"
-          id="vixrant/ckmgm3cic22rg17oi3c45by0g"
+          // id="vixrant/ckmgm3cic22rg17oi3c45by0g"
+          id="vixrant/ckniiq2bh0g1218mmzqennvkf"
         />
         
         {reports && reports.map((r, i) => (

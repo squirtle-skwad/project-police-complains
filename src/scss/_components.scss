@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   width: max-content;
+  background: white;
 }
 
 .problem-img {
@@ -19,7 +20,7 @@
 }
 
 #map-container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 

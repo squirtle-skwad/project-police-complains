@@ -31,7 +31,7 @@ const Dashboard =
               <Map reports={data.reports} />
             </div>
           </Col>
-          <Col sm={3} className="shadow text-center" style={{ zIndex: 1000, }}>
+          <Col sm={3} className="text-center" style={{ zIndex: 1000, }}>
             <Problems reports={data.reports} />
           </Col>
         </Row>

@@ -1,8 +1,8 @@
 import { Button } from 'reactstrap';
 
 const ProblemCard =
-  ({ area, category, text }) => (
-    <div className="problem-card d-flex flex-column" style={{ height: 'fit-content', minWidth: '300px' }}>
+  ({ area, category, text, float }) => (
+    <div className={`problem-card ${float ? "shadow-sm" : ""} my-2 d-flex flex-column`} style={{ height: 'fit-content', minWidth: '300px' }}>
       {/* <img
         src="https://upload.wikimedia.org/wikipedia/commons/a/aa/DSM_Building_Collapse_2013.jpg"
         className="problem-img shadow-sm"
