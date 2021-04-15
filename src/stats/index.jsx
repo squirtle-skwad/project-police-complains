@@ -1,5 +1,5 @@
 import { Card, CardBody, } from "reactstrap";
-import { ComplaintsRate, ComplaintsTypes, AreaCases } from "./charts";
+import { ComplaintsRate, ComplaintsTypes, AreaCases, ManagedChart } from "./charts";
 
 const Stats =
 () => {
@@ -26,6 +26,13 @@ const Stats =
                         <AreaCases />
                     </CardBody>
                     <h6 className="fw-bolder text-center">Complaints by area</h6>
+                </Card>
+
+                <Card className="w-100 p-2 font-emp shadow" style={{ background: "lightcoral" }}>
+                    <CardBody>
+                        <ManagedChart />
+                    </CardBody>
+                    <h6 className="fw-bolder text-center">Percentage of managed cases</h6>
                 </Card>
             </div>
         </div>

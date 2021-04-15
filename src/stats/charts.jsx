@@ -1,4 +1,4 @@
-import { ResponsiveContainer, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, LineChart, PieChart, Pie, Cell, FunnelChart, Funnel, LabelList } from 'recharts';
+import { ResponsiveContainer, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, LineChart, PieChart, Pie, Cell, FunnelChart, Funnel, LabelList, RadialBarChart, RadialBar } from 'recharts';
 
 export const ComplaintsRate = () => {
     const data = [
@@ -121,3 +121,50 @@ export const AreaCases = () => {
         </ResponsiveContainer>
     )
 }
+
+export const ManagedChart =
+    () => {
+        const data = [
+            {
+                "name": "Kandivali",
+                "pv": 24,
+                "fill": "#8884d8"
+            },
+            {
+                "name": "Borivali",
+                "pv": 45,
+                "fill": "#83a6ed"
+            },
+            {
+                "name": "Malad",
+                "pv": 13,
+                "fill": "#8dd1e1"
+            },
+            {
+                "name": "Dahisar",
+                "pv": 98,
+                "fill": "#82ca9d"
+            },
+            {
+                "name": "Goregaon",
+                "pv": 39,
+                "fill": "#a4de6c"
+            },
+        ]
+
+
+        return (
+            <ResponsiveContainer width="100%" height={250}>
+                <RadialBarChart
+                    innerRadius="10%"
+                    outerRadius="100%"
+                    data={data}
+                    startAngle={360}
+                    endAngle={0}
+                >
+                    <RadialBar minAngle={15} label={{ fill: '#666', position: 'insideStart' }} background clockWise={true} dataKey='pv' name="Managed cases" />
+                    <Legend iconSize={10} width={120} height={120} layout='vertical' verticalAlign='middle' align="right" />
+                    <Tooltip />
+                </RadialBarChart>
+            </ResponsiveContainer>);
+    };

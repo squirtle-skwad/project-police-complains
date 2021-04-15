@@ -16,6 +16,14 @@ const Map =
       );
     }
 
+    if ( pos.error ) {
+      return (
+        <div className="vh-100 w-100 d-flex justify-content-center align-items-center">
+          {pos.error.message}
+        </div>
+      );
+    }
+
     return (
       <MapContainer
         center={[pos.latitude, pos.longitude]}
