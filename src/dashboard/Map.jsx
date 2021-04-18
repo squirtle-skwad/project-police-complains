@@ -1,8 +1,24 @@
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import { CircleLoader } from 'react-spinners';
 import { useGeolocation } from 'react-use';
+import L from 'leaflet';
+import 'leaflet.heat';
 
 import ProblemCard from './ProblemCard';
+import { useEffect } from 'react';
+
+const HeatMap =
+({ reports }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if ( !reports ) return;
+
+    L.heatLayer(reports.map(r => [r.lat, r.lng, 0.75]), {radius: 100}).addTo(map);
+  }, [reports]);
+
+  return "";
+};
 
 const Map =
   ({ reports }) => {
@@ -42,7 +58,9 @@ const Map =
           // id="vixrant/ckmgm3cic22rg17oi3c45by0g"
           id="vixrant/ckniiq2bh0g1218mmzqennvkf"
         />
-        
+
+        <HeatMap reports={reports} />
+
         {reports && reports.map((r, i) => (
           <Marker position={[r.lat, r.lng]} style={{ innerWidth: "auto" }}>
             <Popup className="popover-fit">

@@ -10,6 +10,7 @@
     "date-fns": "^2.19.0",
     "graphql": "^15.5.0",
     "leaflet": "^1.7.1",
+    "leaflet.heat": "^0.2.0",
     "lodash": "^4.17.21",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",

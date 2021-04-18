@@ -8,6 +8,7 @@ import Sidebar from './common/Sidebar';
 import Dashboard from './dashboard';
 import Stats from './stats';
 import Login from './login';
+import Form from './form';
 
 const AppProviders =
 ({ children }) => (
@@ -33,7 +34,7 @@ const AppRoutes =
       <Login />
     </Route>
     <Route exact path="/submit">
-      <Dashboard />
+      <Form />
     </Route>
   </Switch>
 );
