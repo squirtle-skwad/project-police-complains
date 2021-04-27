@@ -9,15 +9,11 @@ const ProblemCard =
       /> */}
       <div className="p-3 d-flex flex-column align-items-start">
         <span className="h4 fw-bold">{category}</span>
-        <div className="w-100 d-flex justify-content-between">
+        <div className="w-100 d-flex flex-column align-items-start">
           <span className="h6 text-muted"> In {area} </span>
-          <Button
-            color="secondary"
-            size="sm"
-            className="fw-bold ml-auto"
-          >
-            Manage
-          </Button>
+          <p>
+            { text }
+          </p>
         </div>
       </div>
     </div>

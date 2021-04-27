@@ -14,7 +14,7 @@ const HeatMap =
   useEffect(() => {
     if ( !reports ) return;
 
-    L.heatLayer(reports.map(r => [r.lat, r.lng, 0.75]), {radius: 100}).addTo(map);
+    L.heatLayer(reports.map(r => [r.lat, r.lng, 1]), {radius: 100}).addTo(map);
   }, [reports]);
 
   return "";

@@ -5,7 +5,7 @@ const Problems =
   ({ reports }) => (
     <Container>
       <Row>
-        <section className="h-100 pt-5 d-flex flex-column align-items-center">
+        <section className="vh-100 pt-5 d-flex flex-column align-items-center overflow-auto">
           {reports.map((r, i) => <ProblemCard float {...r} key={i} />)}
         </section>
       </Row>
