@@ -8,7 +8,7 @@ import Problems from './Problems';
 const Dashboard =
   () => {
     const { loading, error, data } = useQuery(GET_REPORTS, {
-      pollInterval: 1000,
+      pollInterval: 10000,
     });
 
     if(error) {
